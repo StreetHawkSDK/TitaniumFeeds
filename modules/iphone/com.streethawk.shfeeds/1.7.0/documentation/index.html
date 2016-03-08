@@ -1,0 +1,43 @@
+<h1>Feeds Module</h1>
+<h2>Description</h2>
+<p>StreetHawk's Feed module is used for sending feeds to your application.</p>
+<h2>Accessing the Feeds Module</h2>
+<p>To access this module from JavaScript, you would do the following:</p>
+<pre><code>var shFeed = require("com.streethawk.Feeds");
+</code></pre>
+<p>The shFeed variable is a reference to the Module object.</p>
+<h2>Reference</h2>
+<p>https://streethawk.freshdesk.com/solution/articles/12000000944-feed</p>
+<h3>feeds.function</h3>
+<ul>
+<li>
+<p>Callback for new feed available</p>
+<p>function newFeedCallback(e)
+{
+    alert("Callback for new feed available.");
+}
+//Register new feed callback to StreetHawk SDK
+shFeed.notifyNewFeedCallback({newfeed: newFeedCallback}); //must use key "newfeed"</p>
+</li>
+<li>
+<p>Callback for fetching feed items</p>
+<p>function fetchFeedCallback(e)
+{
+    Ti.API.info("Fetch feed items: " + JSON.stringify(e));
+}
+//Send request to fetch feed items.
+shFeed.shGetFeedDataFromServer(<offset>, {feed: fetchFeedCallback}); //must use key "feed"</p>
+</li>
+<li>
+<p>Send request for feed ack</p>
+<p>shFeed.reportFeedAck(<feed_id>);</p>
+</li>
+<li>
+<p>Send feed result</p>
+<p>shFeed.reportFeedRead(<feed_id>, <feed_result: -1, 0 or 1>);</p>
+</li>
+</ul>
+<h2>Author</h2>
+<p>support@streethawk.com</p>
+<h2>License</h2>
+<p>Apache</p>
