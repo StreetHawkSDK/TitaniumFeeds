@@ -13,7 +13,7 @@ win.add(label);
 win.open();
 
 // TODO: write your module tests here
-var feeds = require('com.streethawk.shfeeds');
+var feeds = require('com.streethawk.Feeds');
 Ti.API.info("module is => " + feeds);
 
 label.text = feeds.example();

@@ -1,0 +1,18 @@
+#
+# this is your module manifest and used by Titanium
+# during compilation, packaging, distribution, etc.
+#
+version: 1.8.0
+apiversion: 2
+architectures: armv7 arm64 i386 x86_64
+description: StreetHawk's Feed Module is used for sending feeds to your application.
+author: StreetHawk
+license: Apache Public License
+copyright: 2016 StreetHawk
+
+# these should not be edited
+name: Feeds
+moduleid: com.streethawk.shfeeds
+guid: 2b79cddb-20ce-4cd8-9867-81d0edbc5398
+platform: iphone
+minsdk: 5.0.0.GA
